@@ -278,7 +278,7 @@ class FastRCNNPredictor(nn.Module):
         x = x.flatten(start_dim=1)
         scores = self.cls_score(x)
         bbox_deltas = self.bbox_pred(x)
-
+        print(scores)
         return scores, bbox_deltas
 
 
